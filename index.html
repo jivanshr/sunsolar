@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SunSolar</title>
+<link href="https://fonts.googleapis.com/css?family=Oswald,Lato" rel="stylesheet">
+
+</head>
+<body>
+<style type="text/css">
+* { margin:0; padding:0; }
+body { font-family: 'Lato', sans-serif; }
+h1 { font-size:48px; font-weight:bold; }
+h2 { font-size:36px; font-weight:bold; }
+h1, h2 { font-family: 'Oswald', sans-serif; line-height: 1; }
+.color-yellow { color:#F8E71C; }
+.color-white { color:#fff; }
+.uppercase { text-transform: uppercase; }
+.spaced { letter-spacing:0.77px; }
+.hero { height:438px; padding-top:60px; overflow: hidden; }
+.ptn1 { background: url(img/ptn.png); }
+.container {margin:0 auto; max-width: 1140px; position: relative;  }
+.mg-top-lg { margin-top:90px; }
+.hexa-group img, .solar-group img { position: absolute;}
+.solar-group img { max-width: 180px;}
+.solar1 { left:624px; top:183px; z-index: 1;}
+.solar2 { left:708px; top:130px; }
+
+.hexa-group img.hexa1 { left:610px; top:-53px; animation-delay:.2s }
+.hexa-group img.hexa2 { left:692px; top:-11px;animation-delay:.3s }
+.hexa-group img.hexa3 { left:769px; top:34px; animation-delay:.4s}
+.hexa-group img.hexa4 { left:846px; top:80px; animation-delay:.5s}
+.hexa-group img.hexa5 { left:925px; top:124px; animation-delay:.6s}
+.hexa-group img.hexa6 { left:1005px; top:166px; animation-delay:.7s}
+.hexa-group img.hexa7 { left:925px; top:212px; animation-delay:.6s}
+.hexa-group img.hexa8 { left:846px; top:256px; animation-delay:.5s}
+.hexa-group img.hexa9 { left:766px; top:302px; animation-delay:.4s}
+.hexa-group img.hexa10 { left:690px; top:349px; animation-delay:.3s }
+.hexa-group img.hexa11 { left:615px; top:395px; animation-delay:.2s }
+
+
+
+@keyframes forward {
+	from { opacity:1;  }
+	50% { opacity:0; }
+	to { opacity:1;  }
+}
+
+.hexa-group img { -webkit-animation: forward 1s ease-in-out infinite;
+-o-animation: forward 1s ease-in-out infinite;
+animation: forward 1s ease-in-out infinite; }
+
+</style>
+
+<div class="ptn1 hero color-white">
+<div class="container">
+<h1 class="uppercase""><span class="color-yellow spaced">Solar Energy</span> <br/> is the energy of the future</h1>
+<p>Invest In Future</p>
+<br/>
+<br/>
+<br/>
+<h2 class="mg-top-lg">SunSolar</h2>
+<div class="solar-group">
+<img class="solar1" src="img/solar1.png"/>
+<img class="solar2" src="img/solar2.png"/>
+</div>
+
+<div class="hexa-group">
+<img class="hexa1" src="img/hexa.svg"/>
+<img class="hexa2" src="img/hexa.svg"/>
+<img class="hexa3" src="img/hexa.svg"/>
+<img class="hexa4" src="img/hexa.svg"/>
+<img class="hexa5" src="img/hexa.svg"/>
+<img class="hexa6" src="img/hexa.svg"/>
+<img class="hexa7" src="img/hexa.svg"/>
+<img class="hexa8" src="img/hexa.svg"/>
+<img class="hexa9" src="img/hexa.svg"/>
+<img class="hexa10" src="img/hexa.svg"/>
+<img class="hexa11" src="img/hexa.svg"/>
+</div>
+</div>
+</div>
+
+<div style="text-align: center;">
+<img style="width:100%;max-width: 1400px;" src="img/home.jpg">
+</div>
+
+</body>
+</html>
