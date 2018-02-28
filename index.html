@@ -3,12 +3,11 @@
 <head>
 	<meta charset="UTF-8">
 	<title>SunSolar</title>
-<link href="https://fonts.googleapis.com/css?family=Oswald,Lato" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css?family=Oswald|Lato" rel="stylesheet">
 </head>
 <body>
 <style type="text/css">
-* { margin:0; padding:0; }
+* { margin:0; padding:0; box-sizing: border-box; }
 body { font-family: 'Lato', sans-serif; }
 h1 { font-size:48px; font-weight:bold; }
 h2 { font-size:36px; font-weight:bold; }
@@ -16,7 +15,7 @@ h1, h2 { font-family: 'Oswald', sans-serif; line-height: 1; }
 .color-yellow { color:#F8E71C; }
 .color-white { color:#fff; }
 .uppercase { text-transform: uppercase; }
-.spaced { letter-spacing:0.77px; }
+.spaced { letter-spacing:-0.77px; }
 .hero { height:438px; padding-top:60px; overflow: hidden; }
 .ptn1 { background: url(img/ptn.png); }
 .container {margin:0 auto; max-width: 1140px; position: relative;  }
@@ -29,7 +28,7 @@ h1, h2 { font-family: 'Oswald', sans-serif; line-height: 1; }
 .hexa-group img.hexa1 { left:610px; top:-53px; animation-delay:.2s }
 .hexa-group img.hexa2 { left:692px; top:-11px;animation-delay:.3s }
 .hexa-group img.hexa3 { left:769px; top:34px; animation-delay:.4s}
-.hexa-group img.hexa4 { left:846px; top:80px; animation-delay:.5s}
+.hexa-group img.hexa4 { left:846px; top:78px; animation-delay:.5s}
 .hexa-group img.hexa5 { left:925px; top:124px; animation-delay:.6s}
 .hexa-group img.hexa6 { left:1005px; top:166px; animation-delay:.7s}
 .hexa-group img.hexa7 { left:925px; top:212px; animation-delay:.6s}
@@ -38,27 +37,68 @@ h1, h2 { font-family: 'Oswald', sans-serif; line-height: 1; }
 .hexa-group img.hexa10 { left:690px; top:349px; animation-delay:.3s }
 .hexa-group img.hexa11 { left:615px; top:395px; animation-delay:.2s }
 
+.hexa-group img.hexa-sm-1 { left:879px; top:210px; animation-delay:.5s }
+.hexa-group img.hexa-sm-2 { left:879px; top:164px; animation-delay:.5s }
 
 
-@keyframes forward {
-	from { opacity:1;  }
-	50% { opacity:0; }
-	to { opacity:1;  }
+.header { position: absolute; left:0; top:0; z-index:90; background:#fff; height:70px; width:100%; padding:10px 0; box-shadow:0 1px 0 #bbb;}
+.header.sticky { position: fixed; position: fixed;
+  top:0; left:0;
+  width: 100%; z-index:90 }
+.header-height { height:70px; position: relative; }
+.logo { width:56px; float: left; margin-right: 20px; }
+
+.text-hidden { width:0px; overflow: hidden; transition:width .3s ease-in-out; font-size: 22px; margin-top: 10px; }
+.sticky .text-hidden { width:150px; }
+.menu { margin-top:15px; }
+.menu li { float: left; list-style: none; margin-right: 40px; font-size:14px; }
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+.float-left { float: left; }
+
+@keyframes forw ard {
+	from { opacity:1;}
+	50% { opacity:0;}
+	to { opacity:1;}
 }
 
-.hexa-group img { -webkit-animation: forward 1s ease-in-out infinite;
--o-animation: forward 1s ease-in-out infinite;
-animation: forward 1s ease-in-out infinite; }
+.hexa-group img {
+-webkit-animation: forward 1.4s ease-in-out infinite;
+-o-animation: forward 1.4s ease-in-out infinite;
+animation: forward 1.4s ease-in-out infinite; }
+
+
+
 
 </style>
 
 <div class="ptn1 hero color-white">
 <div class="container">
-<h1 class="uppercase""><span class="color-yellow spaced">Solar Energy</span> <br/> is the energy of the future</h1>
+
+ <h1  >
+    
+</h1>
+
+<h1 class="uppercase""><span class="color-yellow spaced">Solar Energy</span> <br/>
+
+<span class="typewrite" data-period="2000" data-type='[ "is the energy of the future", "Saving 123,456 tonnes of GHG.", "Saving $123,456 in investment" ]' </span><span class="wrap"></span></h1>
 <p>Invest In Future</p>
 <br/>
 <br/>
 <br/>
+
+
 <h2 class="mg-top-lg">SunSolar</h2>
 <div class="solar-group">
 <img class="solar1" src="img/solar1.png"/>
@@ -77,13 +117,119 @@ animation: forward 1s ease-in-out infinite; }
 <img class="hexa9" src="img/hexa.svg"/>
 <img class="hexa10" src="img/hexa.svg"/>
 <img class="hexa11" src="img/hexa.svg"/>
+<img class="hexa-sm-1" src="img/hexa-sm.svg"/>
+<img class="hexa-sm-2" src="img/hexa-sm.svg"/>
 </div>
 </div>
 </div>
 
+<div class="header-height">
+<div class="header">
+<div class="container clearfix">
+<img src="img/logo.png"/ class="logo">
+<h2 class="text-hidden float-left">SunSolar</h2>
+<ul class="menu float-left clearfix">
+<li> About SunSolar</li>
+<li> Vision</li>
+<li> Situation  </li>
+<li> ICO</li>
+<li> Team </li>
+<li> Contact</li>
+</ul>
+
+
+<img src="img/social.png" style="float: right; margin-top:15px;" />
+</div>
+</div>
+</div>
+
+
 <div style="text-align: center;">
 <img style="width:100%;max-width: 1400px;" src="img/home.jpg">
 </div>
+
+
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+  <script type="text/javascript">
+  	
+$(document).ready(function(){
+
+$(window).scroll(function(){
+	var windowTop = $(window).scrollTop();
+if(438 < windowTop) {
+$('.header').addClass("sticky");
+}
+else {
+$('.header').removeClass("sticky");
+}
+});
+
+
+});
+
+
+
+var TxtType = function(el, toRotate, period) {
+        this.toRotate = toRotate;
+        this.el = el;
+        this.loopNum = 0;
+        this.period = parseInt(period, 10) || 2000;
+        this.txt = '';
+        this.tick();
+        this.isDeleting = false;
+    };
+
+    TxtType.prototype.tick = function() {
+        var i = this.loopNum % this.toRotate.length;
+        var fullTxt = this.toRotate[i];
+
+        if (this.isDeleting) {
+        this.txt = fullTxt.substring(0, this.txt.length - 1);
+        } else {
+        this.txt = fullTxt.substring(0, this.txt.length + 1);
+        }
+
+        this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+        var that = this;
+        var delta = 200 - Math.random() * 100;
+
+        if (this.isDeleting) { delta /= 2; }
+
+        if (!this.isDeleting && this.txt === fullTxt) {
+        delta = this.period;
+        this.isDeleting = true;
+        } else if (this.isDeleting && this.txt === '') {
+        this.isDeleting = false;
+        this.loopNum++;
+        delta = 500;
+        }
+
+        setTimeout(function() {
+        that.tick();
+        }, delta);
+    };
+
+    window.onload = function() {
+        var elements = document.getElementsByClassName('typewrite');
+        for (var i=0; i<elements.length; i++) {
+            var toRotate = elements[i].getAttribute('data-type');
+            var period = elements[i].getAttribute('data-period');
+            if (toRotate) {
+              new TxtType(elements[i], JSON.parse(toRotate), period);
+            }
+        }
+        // INJECT CSS
+        var css = document.createElement("style");
+        css.type = "text/css";
+        css.innerHTML = ".typewrite > .wrap { border-right: 5px solid #f48f50}";
+        document.body.appendChild(css);
+    };
+
+
+  </script>
 
 </body>
 </html>
